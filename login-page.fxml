@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airlinereservationsystem.LoginPageController">
+   <children>
+      <Label layoutX="205.0" layoutY="36.0" text="SKG Airlines">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="233.0" layoutY="144.0" />
+      <TextField fx:id="passwordField" layoutX="233.0" layoutY="200.0" />
+      <Label layoutX="152.0" layoutY="146.0" text="Username:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="202.0" text="Password:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="256.0" layoutY="321.0" text="Forgot Password" />
+      <Label layoutX="254.0" layoutY="289.0" text="Forgot Username" />
+      <Button fx:id="loginButton" layoutX="261.0" layoutY="246.0" mnemonicParsing="false" onAction="#onLoginButtonPress" prefHeight="25.0" prefWidth="78.0" text="Log In" />
+      <Label fx:id="incorrectLogin" alignment="CENTER" layoutX="255.0" layoutY="100.0" prefHeight="17.0" prefWidth="105.0" textFill="RED" />
+   </children>
+</AnchorPane>
