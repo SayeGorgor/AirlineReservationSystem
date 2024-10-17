@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,7 +18,7 @@
          </font>
       </Label>
       <TextField fx:id="usernameField" layoutX="233.0" layoutY="144.0" />
-      <TextField fx:id="passwordField" layoutX="233.0" layoutY="200.0" />
+      <TextField fx:id="visiblePassword" layoutX="233.0" layoutY="200.0" visible="false" />
       <Label layoutX="152.0" layoutY="146.0" text="Username:">
          <font>
             <Font size="15.0" />
@@ -25,9 +29,20 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="256.0" layoutY="321.0" text="Forgot Password" />
-      <Label layoutX="254.0" layoutY="289.0" text="Forgot Username" />
       <Button fx:id="loginButton" layoutX="261.0" layoutY="246.0" mnemonicParsing="false" onAction="#onLoginButtonPress" prefHeight="25.0" prefWidth="78.0" text="Log In" />
       <Label fx:id="incorrectLogin" alignment="CENTER" layoutX="255.0" layoutY="100.0" prefHeight="17.0" prefWidth="105.0" textFill="RED" />
+      <Hyperlink fx:id="createAccount" layoutX="255.0" layoutY="349.0" onAction="#onCreateAccountLinkPress" text="Create Account" />
+      <PasswordField fx:id="passwordField" layoutX="233.0" layoutY="200.0" />
+      <Button fx:id="viewPasswordButton" contentDisplay="GRAPHIC_ONLY" layoutX="396.0" layoutY="200.0" mnemonicParsing="false" onAction="#onViewPasswordButtonPress" prefHeight="25.0" prefWidth="26.0" text="Button">
+         <graphic>
+            <ImageView fx:id="imageView" fitHeight="13.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../OneDrive/Pictures/Saved%20Pictures/772420-200.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Hyperlink fx:id="forgotUsername" layoutX="250.0" layoutY="286.0" onAction="#onForgotUsernameLinkPress" text="Forgot Username" />
+      <Hyperlink fx:id="forgotPassword" layoutX="252.0" layoutY="318.0" onAction="#onForgotPasswordLinkPress" text="Forgot Password" />
    </children>
 </AnchorPane>
